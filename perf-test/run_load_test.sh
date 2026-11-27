@@ -1,5 +1,5 @@
 #!/bin/bash
-# JMeter 梯度压测：50 / 100 / 200 并发，压 /api/pay/create
+# JMeter 梯度压测：30 / 60 / 120 并发，压 /api/pay/create
 # 用法：在 perf-test 目录执行 bash run_load_test.sh <jmeter的bin目录绝对路径>
 set -e
 
@@ -19,7 +19,7 @@ echo ""
 
 mkdir -p results
 
-for T in 50 100 200; do
+for T in 30 60 120; do
   echo "=== 压测：${T} 并发 × 20 轮 ==="
   "$JMETER_BIN/jmeter" -n -t pay_create_load.jmx \
     -Jthreads=$T -Jramp=10 -Jloops=20 \
