@@ -10,3 +10,5 @@ allure-results/
 allure-report/
 perf-test/results/report_*/
 perf-test/results/smoke.jtl
+
+perf-test/jmeter.log
