@@ -1,0 +1,194 @@
+2026-11-23 09:05:53,447 INFO  [payment-api] [req-0f4162d8] /api/order/refund order_id=ORD20261123776 user_id=1010 amount=520.0 cost=49ms status=200
+2026-11-23 09:06:20,952 INFO  [payment-api] [req-2f60090e] /api/pay/callback order_id=ORD20261123583 user_id=1003 amount=320.0 cost=39ms status=200
+2026-11-23 09:11:29,306 INFO  [payment-api] [req-749ce86b] /api/pay/callback order_id=ORD20261123409 user_id=1010 amount=88.0 cost=175ms status=200
+2026-11-23 09:17:03,029 INFO  [payment-api] [req-b90eb928] /api/order/refund order_id=ORD20261123262 user_id=1002 amount=256.0 cost=120ms status=200
+2026-11-23 09:18:01,181 INFO  [payment-api] [req-ea5446ae] /api/order/refund order_id=ORD20261123540 user_id=1010 amount=256.0 cost=123ms status=200
+2026-11-23 09:25:49,923 INFO  [payment-api] [req-1a4c4e72] /api/pay/create order_id=ORD20261123156 user_id=1002 amount=88.0 cost=89ms status=200
+2026-11-23 09:27:36,330 INFO  [payment-api] [req-c38985a8] /api/order/query order_id=ORD20261123316 user_id=1009 amount=88.0 cost=74ms status=200
+2026-11-23 09:30:28,032 INFO  [payment-api] [req-29a793db] /api/order/refund order_id=ORD20261123503 user_id=1004 amount=88.0 cost=157ms status=200
+2026-11-23 09:35:39,532 INFO  [payment-api] [req-6c90e4eb] /api/pay/create order_id=ORD20261123109 user_id=1007 amount=320.0 cost=90ms status=200
+2026-11-23 09:40:02,843 INFO  [payment-api] [req-e0148565] /api/order/query order_id=ORD20261123427 user_id=1002 amount=520.0 cost=132ms status=200
+2026-11-23 09:44:23,380 INFO  [payment-api] [req-6f273bc8] /api/pay/create order_id=ORD20261123526 user_id=1009 amount=256.0 cost=86ms status=200
+2026-11-23 09:55:18,165 INFO  [payment-api] [req-69ed4a7d] /api/order/query order_id=ORD20261123439 user_id=1004 amount=100.5 cost=30ms status=200
+2026-11-23 10:06:18,735 INFO  [payment-api] [req-ffb3c051] /api/order/query order_id=ORD20261123591 user_id=1009 amount=100.5 cost=69ms status=200
+2026-11-23 10:29:21,171 INFO  [payment-api] [req-c512d10f] /api/pay/create order_id=ORD20261123404 user_id=1003 amount=25.0 cost=136ms status=200
+2026-11-23 10:34:21,715 INFO  [payment-api] [req-dbfb8e93] /api/order/refund order_id=ORD20261123634 user_id=1002 amount=25.0 cost=148ms status=200
+2026-11-23 10:35:45,540 INFO  [payment-api] [req-da0fa8e3] /api/pay/callback order_id=ORD20261123113 user_id=1003 amount=320.0 cost=92ms status=200
+2026-11-23 10:38:21,447 INFO  [payment-api] [req-4e05d311] /api/pay/callback order_id=ORD20261123477 user_id=1010 amount=520.0 cost=25ms status=200
+2026-11-23 10:44:49,192 INFO  [payment-api] [req-69e23419] /api/pay/callback order_id=ORD20261123320 user_id=1001 amount=520.0 cost=102ms status=200
+2026-11-23 10:46:41,661 INFO  [payment-api] [req-edd55324] /api/pay/create order_id=ORD20261123807 user_id=1009 amount=520.0 cost=68ms status=200
+2026-11-23 10:46:46,555 INFO  [payment-api] [req-8d9d691a] /api/pay/create order_id=ORD20261123995 user_id=1007 amount=25.0 cost=109ms status=200
+2026-11-23 10:53:00,031 INFO  [payment-api] [req-8e29b2e6] /api/order/refund order_id=ORD20261123894 user_id=1003 amount=199.9 cost=70ms status=200
+2026-11-23 10:54:10,076 INFO  [payment-api] [req-232f1b8a] /api/order/refund order_id=ORD20261123674 user_id=1006 amount=520.0 cost=60ms status=200
+2026-11-23 10:55:57,800 INFO  [payment-api] [req-f2bf5ced] /api/pay/create order_id=ORD20261123219 user_id=1008 amount=256.0 cost=143ms status=200
+2026-11-23 10:57:33,352 INFO  [payment-api] [req-a7718f7f] /api/order/refund order_id=ORD20261123319 user_id=1008 amount=320.0 cost=42ms status=200
+2026-11-23 11:00:34,632 INFO  [payment-api] [req-cc116788] /api/order/query order_id=ORD20261123609 user_id=1001 amount=199.9 cost=139ms status=200
+2026-11-23 11:09:13,915 INFO  [payment-api] [req-1e080875] /api/order/query order_id=ORD20261123399 user_id=1009 amount=199.9 cost=112ms status=200
+2026-11-23 11:12:34,166 INFO  [payment-api] [req-3fa9f6eb] /api/pay/callback order_id=ORD20261123989 user_id=1008 amount=100.5 cost=169ms status=200
+2026-11-23 11:13:56,027 INFO  [payment-api] [req-1a0e0995] /api/pay/create order_id=ORD20261123670 user_id=1009 amount=100.5 cost=138ms status=200
+2026-11-23 11:14:16,659 INFO  [payment-api] [req-17d8275d] /api/order/refund order_id=ORD20261123372 user_id=1004 amount=199.9 cost=31ms status=200
+2026-11-23 11:24:43,660 INFO  [payment-api] [req-258a9b31] /api/pay/create order_id=ORD20261123103 user_id=1003 amount=100.5 cost=169ms status=200
+2026-11-23 11:28:54,610 INFO  [payment-api] [req-d4eb7d3a] /api/order/query order_id=ORD20261123697 user_id=1006 amount=520.0 cost=68ms status=200
+2026-11-23 11:29:10,151 INFO  [payment-api] [req-f1964db2] /api/order/query order_id=ORD20261123208 user_id=1007 amount=25.0 cost=160ms status=200
+2026-11-23 11:39:19,246 INFO  [payment-api] [req-cebaf88a] /api/order/query order_id=ORD20261123568 user_id=1003 amount=88.0 cost=154ms status=200
+2026-11-23 11:47:54,684 INFO  [payment-api] [req-bf8d17c1] /api/pay/create order_id=ORD20261123440 user_id=1005 amount=256.0 cost=81ms status=200
+2026-11-23 11:54:39,655 INFO  [payment-api] [req-31a8182c] /api/order/refund order_id=ORD20261123747 user_id=1010 amount=25.0 cost=142ms status=200
+2026-11-23 11:57:05,789 INFO  [payment-api] [req-77909600] /api/pay/create order_id=ORD20261123975 user_id=1004 amount=10.5 cost=36ms status=200
+2026-11-23 14:01:13,017 INFO  [payment-api] [req-36246033] /api/pay/callback order_id=ORD20261123305 user_id=1008 amount=199.9 cost=51ms status=200
+2026-11-23 14:13:19,650 INFO  [payment-api] [req-24fabb87] /api/pay/create order_id=ORD20261123282 user_id=1003 amount=256.0 cost=69ms status=200
+2026-11-23 14:14:53,970 INFO  [payment-api] [req-03564e6d] /api/order/query order_id=ORD20261123873 user_id=1001 amount=25.0 cost=45ms status=200
+2026-11-23 14:15:19,776 INFO  [payment-api] [req-01a794d0] /api/order/query order_id=ORD20261123686 user_id=1002 amount=10.5 cost=25ms status=200
+2026-11-23 14:17:38,180 INFO  [payment-api] [req-5d7fdb74] /api/pay/callback order_id=ORD20261123667 user_id=1002 amount=25.0 cost=61ms status=200
+2026-11-23 14:24:51,670 INFO  [payment-api] [req-22efed27] /api/order/query order_id=ORD20261123766 user_id=1008 amount=256.0 cost=65ms status=200
+2026-11-23 14:26:52,888 INFO  [payment-api] [req-b3e126af] /api/pay/create order_id=ORD20261123118 user_id=1007 amount=25.0 cost=73ms status=200
+2026-11-23 14:30:17,479 INFO  [payment-api] [req-9d8c560e] /api/order/query order_id=ORD20261123150 user_id=1005 amount=320.0 cost=136ms status=200
+2026-11-23 14:30:49,118 INFO  [payment-api] [req-a9d4c26a] /api/pay/create order_id=ORD20261123657 user_id=1004 amount=199.9 cost=165ms status=200
+2026-11-23 14:33:44,832 INFO  [payment-api] [req-54426143] /api/pay/create order_id=ORD20261123155 user_id=1009 amount=520.0 cost=117ms status=200
+2026-11-23 14:34:41,367 INFO  [payment-api] [req-efae95a3] /api/order/refund order_id=ORD20261123743 user_id=1004 amount=199.9 cost=156ms status=200
+2026-11-23 14:47:50,301 INFO  [payment-api] [req-6a8ce5b4] /api/order/refund order_id=ORD20261123984 user_id=1008 amount=88.0 cost=133ms status=200
+2026-11-23 15:02:17,540 INFO  [payment-api] [req-bb2ea659] /api/order/query order_id=ORD20261123335 user_id=1004 amount=100.5 cost=48ms status=200
+2026-11-23 15:02:55,088 INFO  [payment-api] [req-c25d6e1e] /api/order/query order_id=ORD20261123329 user_id=1005 amount=320.0 cost=168ms status=200
+2026-11-23 15:05:17,831 INFO  [payment-api] [req-8a925ad2] /api/pay/create order_id=ORD20261123759 user_id=1004 amount=256.0 cost=164ms status=200
+2026-11-23 15:06:51,986 INFO  [payment-api] [req-e08ea033] /api/pay/create order_id=ORD20261123287 user_id=1007 amount=100.5 cost=176ms status=200
+2026-11-23 15:21:44,565 INFO  [payment-api] [req-4dd75316] /api/pay/callback order_id=ORD20261123895 user_id=1010 amount=520.0 cost=75ms status=200
+2026-11-23 15:26:32,948 INFO  [payment-api] [req-61e5b09c] /api/order/refund order_id=ORD20261123139 user_id=1001 amount=199.9 cost=170ms status=200
+2026-11-23 15:39:49,108 INFO  [payment-api] [req-7ce4815e] /api/pay/create order_id=ORD20261123963 user_id=1001 amount=256.0 cost=159ms status=200
+2026-11-23 15:41:30,655 INFO  [payment-api] [req-790b6f67] /api/pay/create order_id=ORD20261123881 user_id=1004 amount=100.5 cost=41ms status=200
+2026-11-23 15:49:33,645 INFO  [payment-api] [req-1d1b8cc5] /api/pay/callback order_id=ORD20261123110 user_id=1003 amount=25.0 cost=131ms status=200
+2026-11-23 15:52:36,102 INFO  [payment-api] [req-c4706db6] /api/pay/callback order_id=ORD20261123587 user_id=1004 amount=256.0 cost=162ms status=200
+2026-11-23 15:52:47,678 INFO  [payment-api] [req-565e6eb7] /api/order/refund order_id=ORD20261123830 user_id=1009 amount=88.0 cost=122ms status=200
+2026-11-23 15:52:49,864 INFO  [payment-api] [req-c6c40232] /api/order/refund order_id=ORD20261123301 user_id=1009 amount=10.5 cost=77ms status=200
+2026-11-23 16:11:51,718 INFO  [payment-api] [req-9ae56f96] /api/pay/create order_id=ORD20261123717 user_id=1009 amount=25.0 cost=180ms status=200
+2026-11-23 16:12:33,663 INFO  [payment-api] [req-9a4aa1d1] /api/pay/create order_id=ORD20261123339 user_id=1004 amount=256.0 cost=96ms status=200
+2026-11-23 16:19:14,522 INFO  [payment-api] [req-cf7ee18b] /api/pay/create order_id=ORD20261123640 user_id=1008 amount=256.0 cost=86ms status=200
+2026-11-23 16:21:39,347 INFO  [payment-api] [req-784c74e1] /api/order/refund order_id=ORD20261123483 user_id=1006 amount=88.0 cost=64ms status=200
+2026-11-23 16:21:49,993 INFO  [payment-api] [req-4beb4cf2] /api/order/query order_id=ORD20261123354 user_id=1001 amount=10.5 cost=49ms status=200
+2026-11-23 16:25:48,659 INFO  [payment-api] [req-7a2f5126] /api/pay/callback order_id=ORD20261123522 user_id=1010 amount=10.5 cost=140ms status=200
+2026-11-23 16:28:11,792 INFO  [payment-api] [req-cae6df89] /api/order/query order_id=ORD20261123617 user_id=1010 amount=10.5 cost=75ms status=200
+2026-11-23 16:37:58,938 INFO  [payment-api] [req-c65873a5] /api/order/query order_id=ORD20261123854 user_id=1007 amount=100.5 cost=146ms status=200
+2026-11-23 16:38:12,157 INFO  [payment-api] [req-6999012e] /api/pay/callback order_id=ORD20261123935 user_id=1004 amount=199.9 cost=164ms status=200
+2026-11-23 16:44:59,876 INFO  [payment-api] [req-66cef254] /api/pay/callback order_id=ORD20261123484 user_id=1004 amount=10.5 cost=48ms status=200
+2026-11-23 16:49:22,598 INFO  [payment-api] [req-c99f9f64] /api/order/refund order_id=ORD20261123570 user_id=1002 amount=10.5 cost=106ms status=200
+2026-11-23 16:56:06,949 INFO  [payment-api] [req-aa9ae7ba] /api/order/refund order_id=ORD20261123823 user_id=1002 amount=10.5 cost=117ms status=200
+2026-11-24 09:01:59,114 INFO  [payment-api] [req-a70a752d] /api/order/query order_id=ORD20261124988 user_id=1001 amount=10.5 cost=57ms status=200
+2026-11-24 09:09:40,454 INFO  [payment-api] [req-52ccd959] /api/pay/create order_id=ORD20261124744 user_id=1002 amount=100.5 cost=135ms status=200
+2026-11-24 09:11:24,587 INFO  [payment-api] [req-51cc2ed4] /api/pay/create order_id=ORD20261124468 user_id=1001 amount=100.5 cost=100ms status=200
+2026-11-24 09:21:21,776 INFO  [payment-api] [req-f9814511] /api/pay/callback order_id=ORD20261124123 user_id=1001 amount=520.0 cost=66ms status=200
+2026-11-24 09:24:20,885 INFO  [payment-api] [req-07bebbaa] /api/order/refund order_id=ORD20261124764 user_id=1002 amount=320.0 cost=49ms status=200
+2026-11-24 09:24:45,561 INFO  [payment-api] [req-839b17c4] /api/pay/callback order_id=ORD20261124496 user_id=1005 amount=256.0 cost=56ms status=200
+2026-11-24 09:25:22,534 INFO  [payment-api] [req-fba0526e] /api/order/query order_id=ORD20261124917 user_id=1003 amount=520.0 cost=42ms status=200
+2026-11-24 09:27:06,424 INFO  [payment-api] [req-ea92dece] /api/order/refund order_id=ORD20261124726 user_id=1001 amount=88.0 cost=28ms status=200
+2026-11-24 09:31:23,657 INFO  [payment-api] [req-f29b4c54] /api/order/refund order_id=ORD20261124451 user_id=1009 amount=320.0 cost=124ms status=200
+2026-11-24 09:37:15,309 INFO  [payment-api] [req-5e872d30] /api/pay/callback order_id=ORD20261124101 user_id=1010 amount=256.0 cost=110ms status=200
+2026-11-24 09:37:38,125 INFO  [payment-api] [req-650028d4] /api/order/refund order_id=ORD20261124707 user_id=1009 amount=88.0 cost=64ms status=200
+2026-11-24 09:58:02,228 INFO  [payment-api] [req-df65f657] /api/pay/create order_id=ORD20261124327 user_id=1001 amount=100.5 cost=22ms status=200
+2026-11-24 10:04:03,543 INFO  [payment-api] [req-7c361024] /api/order/query order_id=ORD20261124483 user_id=1008 amount=520.0 cost=98ms status=200
+2026-11-24 10:09:37,862 INFO  [payment-api] [req-7cb1a476] /api/order/query order_id=ORD20261124797 user_id=1007 amount=100.5 cost=36ms status=200
+2026-11-24 10:10:51,950 INFO  [payment-api] [req-83ed6264] /api/order/refund order_id=ORD20261124554 user_id=1001 amount=320.0 cost=128ms status=200
+2026-11-24 10:19:45,900 INFO  [payment-api] [req-c1eba404] /api/order/refund order_id=ORD20261124449 user_id=1004 amount=520.0 cost=134ms status=200
+2026-11-24 10:30:22,996 INFO  [payment-api] [req-29ed3a40] /api/pay/callback order_id=ORD20261124313 user_id=1008 amount=520.0 cost=29ms status=200
+2026-11-24 10:36:34,805 INFO  [payment-api] [req-8aa938a6] /api/pay/create order_id=ORD20261124520 user_id=1007 amount=88.0 cost=65ms status=200
+2026-11-24 10:39:35,633 INFO  [payment-api] [req-750fd6c5] /api/pay/callback order_id=ORD20261124385 user_id=1005 amount=199.9 cost=156ms status=200
+2026-11-24 10:41:23,919 INFO  [payment-api] [req-121077c8] /api/order/query order_id=ORD20261124750 user_id=1003 amount=25.0 cost=78ms status=200
+2026-11-24 10:44:11,005 INFO  [payment-api] [req-3096c4dc] /api/order/refund order_id=ORD20261124339 user_id=1009 amount=100.5 cost=88ms status=200
+2026-11-24 10:50:46,527 INFO  [payment-api] [req-28709f00] /api/order/query order_id=ORD20261124964 user_id=1001 amount=100.5 cost=63ms status=200
+2026-11-24 10:52:35,863 INFO  [payment-api] [req-6ef06c7e] /api/order/query order_id=ORD20261124320 user_id=1005 amount=10.5 cost=78ms status=200
+2026-11-24 10:59:26,079 INFO  [payment-api] [req-6082e1bd] /api/pay/create order_id=ORD20261124595 user_id=1010 amount=320.0 cost=42ms status=200
+2026-11-24 11:01:29,966 INFO  [payment-api] [req-deb7e484] /api/order/refund order_id=ORD20261124218 user_id=1003 amount=320.0 cost=86ms status=200
+2026-11-24 11:07:17,327 INFO  [payment-api] [req-7e50cd9f] /api/pay/callback order_id=ORD20261124285 user_id=1007 amount=520.0 cost=114ms status=200
+2026-11-24 11:10:21,299 INFO  [payment-api] [req-0c844bde] /api/pay/callback order_id=ORD20261124476 user_id=1002 amount=199.9 cost=45ms status=200
+2026-11-24 11:15:24,653 INFO  [payment-api] [req-de877f13] /api/order/refund order_id=ORD20261124315 user_id=1010 amount=100.5 cost=90ms status=200
+2026-11-24 11:18:49,185 INFO  [payment-api] [req-816ee9e1] /api/order/refund order_id=ORD20261124443 user_id=1002 amount=320.0 cost=129ms status=200
+2026-11-24 11:22:01,028 INFO  [payment-api] [req-f05a37b6] /api/pay/create order_id=ORD20261124131 user_id=1006 amount=199.9 cost=36ms status=200
+2026-11-24 11:34:12,713 INFO  [payment-api] [req-ee69bd84] /api/order/query order_id=ORD20261124209 user_id=1008 amount=320.0 cost=88ms status=200
+2026-11-24 11:37:49,961 INFO  [payment-api] [req-33d89545] /api/pay/callback order_id=ORD20261124424 user_id=1003 amount=520.0 cost=158ms status=200
+2026-11-24 11:49:04,245 INFO  [payment-api] [req-01c668bf] /api/order/refund order_id=ORD20261124427 user_id=1009 amount=100.5 cost=171ms status=200
+2026-11-24 11:54:39,748 INFO  [payment-api] [req-51299443] /api/order/query order_id=ORD20261124441 user_id=1009 amount=520.0 cost=178ms status=200
+2026-11-24 11:56:56,664 INFO  [payment-api] [req-fdb856d2] /api/order/refund order_id=ORD20261124827 user_id=1001 amount=88.0 cost=46ms status=200
+2026-11-24 11:58:31,733 INFO  [payment-api] [req-3d61143c] /api/pay/create order_id=ORD20261124308 user_id=1008 amount=520.0 cost=117ms status=200
+2026-11-24 14:03:34,244 INFO  [payment-api] [req-16306347] /api/order/refund order_id=ORD20261124302 user_id=1006 amount=88.0 cost=161ms status=200
+2026-11-24 14:03:46,043 INFO  [payment-api] [req-ca6b917b] /api/order/refund order_id=ORD20261124671 user_id=1001 amount=199.9 cost=82ms status=200
+2026-11-24 14:07:42,002 INFO  [payment-api] [req-6eba094f] /api/pay/callback order_id=ORD20261124189 user_id=1010 amount=199.9 cost=163ms status=200
+2026-11-24 14:09:19,422 INFO  [payment-api] [req-7af3f893] /api/order/query order_id=ORD20261124673 user_id=1008 amount=199.9 cost=81ms status=200
+2026-11-24 14:10:56,757 INFO  [payment-api] [req-86f79408] /api/order/refund order_id=ORD20261124995 user_id=1006 amount=199.9 cost=60ms status=200
+2026-11-24 14:26:56,747 INFO  [payment-api] [req-4aa97f49] /api/order/query order_id=ORD20261124639 user_id=1003 amount=520.0 cost=149ms status=200
+2026-11-24 14:39:22,591 INFO  [payment-api] [req-e30de9a8] /api/order/refund order_id=ORD20261124987 user_id=1007 amount=256.0 cost=108ms status=200
+2026-11-24 14:46:36,565 INFO  [payment-api] [req-fb2dbf1c] /api/pay/callback order_id=ORD20261124697 user_id=1007 amount=25.0 cost=55ms status=200
+2026-11-24 14:52:01,519 INFO  [payment-api] [req-85d96ca0] /api/order/refund order_id=ORD20261124446 user_id=1002 amount=520.0 cost=77ms status=200
+2026-11-24 14:57:22,137 INFO  [payment-api] [req-1db8ce53] /api/order/refund order_id=ORD20261124179 user_id=1008 amount=88.0 cost=150ms status=200
+2026-11-24 14:59:35,169 INFO  [payment-api] [req-4c3085e6] /api/pay/callback order_id=ORD20261124927 user_id=1006 amount=199.9 cost=83ms status=200
+2026-11-24 14:59:55,709 INFO  [payment-api] [req-3fb4afdd] /api/order/refund order_id=ORD20261124427 user_id=1008 amount=88.0 cost=166ms status=200
+2026-11-24 15:08:57,610 INFO  [payment-api] [req-4d467fd3] /api/pay/callback order_id=ORD20261124750 user_id=1007 amount=256.0 cost=61ms status=200
+2026-11-24 15:12:27,653 INFO  [payment-api] [req-88d61baf] /api/pay/create order_id=ORD20261124391 user_id=1001 amount=199.9 cost=132ms status=200
+2026-11-24 15:13:25,604 INFO  [payment-api] [req-ff875d11] /api/pay/create order_id=ORD20261124742 user_id=1004 amount=520.0 cost=97ms status=200
+2026-11-24 15:15:55,886 INFO  [payment-api] [req-6e4f41f5] /api/order/query order_id=ORD20261124476 user_id=1006 amount=25.0 cost=122ms status=200
+2026-11-24 15:15:59,812 INFO  [payment-api] [req-790226ac] /api/order/query order_id=ORD20261124827 user_id=1010 amount=256.0 cost=139ms status=200
+2026-11-24 15:18:01,867 INFO  [payment-api] [req-7cd226d5] /api/order/refund order_id=ORD20261124338 user_id=1008 amount=520.0 cost=117ms status=200
+2026-11-24 15:39:20,118 INFO  [payment-api] [req-51d27c01] /api/pay/callback order_id=ORD20261124428 user_id=1003 amount=100.5 cost=102ms status=200
+2026-11-24 15:42:30,187 INFO  [payment-api] [req-ebd8f7b5] /api/order/refund order_id=ORD20261124296 user_id=1007 amount=25.0 cost=33ms status=200
+2026-11-24 15:45:47,789 INFO  [payment-api] [req-7f1e5d47] /api/pay/callback order_id=ORD20261124683 user_id=1002 amount=320.0 cost=110ms status=200
+2026-11-24 15:54:30,965 INFO  [payment-api] [req-5bb19521] /api/order/refund order_id=ORD20261124325 user_id=1010 amount=88.0 cost=46ms status=200
+2026-11-24 15:55:48,172 INFO  [payment-api] [req-9bb55392] /api/order/query order_id=ORD20261124128 user_id=1003 amount=25.0 cost=81ms status=200
+2026-11-24 15:56:45,101 INFO  [payment-api] [req-fb7dabe1] /api/order/query order_id=ORD20261124641 user_id=1005 amount=25.0 cost=158ms status=200
+2026-11-24 16:09:39,618 INFO  [payment-api] [req-2d96c3e5] /api/order/refund order_id=ORD20261124852 user_id=1007 amount=256.0 cost=151ms status=200
+2026-11-24 16:16:11,110 INFO  [payment-api] [req-b3052068] /api/order/refund order_id=ORD20261124524 user_id=1003 amount=256.0 cost=128ms status=200
+2026-11-24 16:26:37,636 INFO  [payment-api] [req-352c3de3] /api/order/refund order_id=ORD20261124901 user_id=1003 amount=320.0 cost=94ms status=200
+2026-11-24 16:27:00,005 INFO  [payment-api] [req-a6d194d9] /api/order/query order_id=ORD20261124899 user_id=1004 amount=199.9 cost=165ms status=200
+2026-11-24 16:27:38,320 INFO  [payment-api] [req-e98947db] /api/order/query order_id=ORD20261124172 user_id=1006 amount=10.5 cost=50ms status=200
+2026-11-24 16:28:43,326 INFO  [payment-api] [req-eaacc58a] /api/pay/callback order_id=ORD20261124895 user_id=1006 amount=10.5 cost=145ms status=200
+2026-11-24 16:31:18,496 INFO  [payment-api] [req-c3e7f368] /api/pay/create order_id=ORD20261124368 user_id=1006 amount=520.0 cost=66ms status=200
+2026-11-24 16:33:19,043 INFO  [payment-api] [req-ae993cc3] /api/order/refund order_id=ORD20261124485 user_id=1003 amount=88.0 cost=54ms status=200
+2026-11-24 16:36:11,639 INFO  [payment-api] [req-aaa70e80] /api/order/refund order_id=ORD20261124161 user_id=1010 amount=10.5 cost=28ms status=200
+2026-11-24 16:39:33,219 INFO  [payment-api] [req-191b6dd0] /api/order/query order_id=ORD20261124620 user_id=1010 amount=10.5 cost=76ms status=200
+2026-11-24 16:43:25,503 INFO  [payment-api] [req-801978c4] /api/pay/callback order_id=ORD20261124293 user_id=1004 amount=10.5 cost=59ms status=200
+2026-11-24 16:58:52,509 INFO  [payment-api] [req-9a4be035] /api/order/refund order_id=ORD20261124922 user_id=1005 amount=25.0 cost=128ms status=200
+2026-11-25 09:01:19,714 INFO  [payment-api] [req-d750b87a] /api/pay/callback order_id=ORD20261125345 user_id=1008 amount=10.5 cost=173ms status=200
+2026-11-25 09:11:37,039 INFO  [payment-api] [req-3b7d28fb] /api/order/refund order_id=ORD20261125909 user_id=1010 amount=256.0 cost=174ms status=200
+2026-11-25 09:15:57,971 INFO  [payment-api] [req-343d299b] /api/pay/callback order_id=ORD20261125247 user_id=1002 amount=520.0 cost=28ms status=200
+2026-11-25 09:17:04,441 INFO  [payment-api] [req-79d102e0] /api/order/refund order_id=ORD20261125395 user_id=1002 amount=100.5 cost=40ms status=200
+2026-11-25 09:31:23,490 INFO  [payment-api] [req-b65197a6] /api/pay/create order_id=ORD20261125285 user_id=1007 amount=100.5 cost=70ms status=200
+2026-11-25 09:36:55,681 INFO  [payment-api] [req-8a373f4f] /api/order/query order_id=ORD20261125172 user_id=1009 amount=88.0 cost=97ms status=200
+2026-11-25 09:39:15,919 INFO  [payment-api] [req-b6a33d2e] /api/order/refund order_id=ORD20261125118 user_id=1009 amount=100.5 cost=47ms status=200
+2026-11-25 09:41:24,239 INFO  [payment-api] [req-e81f9aca] /api/pay/create order_id=ORD20261125564 user_id=1008 amount=88.0 cost=52ms status=200
+2026-11-25 09:46:27,823 INFO  [payment-api] [req-04b2476b] /api/order/query order_id=ORD20261125472 user_id=1010 amount=199.9 cost=116ms status=200
+2026-11-25 09:56:21,244 INFO  [payment-api] [req-8fb062e3] /api/pay/create order_id=ORD20261125777 user_id=1009 amount=88.0 cost=168ms status=200
+2026-11-25 10:10:16,888 INFO  [payment-api] [req-cb642c7d] /api/order/refund order_id=ORD20261125661 user_id=1004 amount=88.0 cost=138ms status=200
+2026-11-25 10:12:03,123 INFO  [payment-api] [req-7f3a9c12] POST /api/pay/create order_id=ORD20261125001 user_id=1001 amount=100.5 cost=45ms status=200
+2026-11-25 10:12:04,456 INFO  [callback-worker] [req-7f3a9c12] callback received order_id=ORD20261125001 trade_no=TXN20261125001 status=PAID
+2026-11-25 10:12:04,501 INFO  [account-svc] [req-7f3a9c12] insert transaction order_id=ORD20261125001 amount=100.5 balance_after=100.5
+2026-11-25 10:12:07,891 WARN  [callback-worker] [req-b81d4e03] duplicate callback not blocked order_id=ORD20261125001 trade_no=TXN20261125001
+2026-11-25 10:12:07,932 INFO  [account-svc] [req-b81d4e03] insert transaction order_id=ORD20261125001 amount=100.5 balance_after=201.0
+2026-11-25 10:12:09,214 WARN  [callback-worker] [req-c92f1a77] duplicate callback not blocked order_id=ORD20261125001 trade_no=TXN20261125001
+2026-11-25 10:12:09,256 INFO  [account-svc] [req-c92f1a77] insert transaction order_id=ORD20261125001 amount=100.5 balance_after=301.5
+2026-11-25 10:15:44,401 INFO  [payment-api] [req-813dee95] /api/pay/callback order_id=ORD20261125724 user_id=1001 amount=100.5 cost=143ms status=200
+2026-11-25 10:22:46,770 INFO  [payment-api] [req-6d04a57d] /api/pay/create order_id=ORD20261125967 user_id=1004 amount=25.0 cost=137ms status=200
+2026-11-25 10:27:22,073 INFO  [payment-api] [req-335e99ae] /api/order/query order_id=ORD20261125444 user_id=1007 amount=199.9 cost=24ms status=200
+2026-11-25 10:31:50,220 INFO  [payment-api] [req-5a1d339d] /api/pay/create order_id=ORD20261125776 user_id=1006 amount=88.0 cost=155ms status=200
+2026-11-25 10:32:39,351 INFO  [payment-api] [req-9d009e10] /api/pay/callback order_id=ORD20261125357 user_id=1004 amount=520.0 cost=163ms status=200
+2026-11-25 10:40:16,533 INFO  [payment-api] [req-2e5d6fd8] /api/order/refund order_id=ORD20261125100 user_id=1002 amount=199.9 cost=137ms status=200
+2026-11-25 10:46:33,895 INFO  [payment-api] [req-0a99f24d] /api/order/refund order_id=ORD20261125821 user_id=1007 amount=100.5 cost=168ms status=200
+2026-11-25 10:51:44,349 INFO  [payment-api] [req-0de5f167] /api/pay/callback order_id=ORD20261125265 user_id=1008 amount=25.0 cost=126ms status=200
+2026-11-25 10:56:38,179 INFO  [payment-api] [req-3fc7bbf1] /api/order/refund order_id=ORD20261125417 user_id=1002 amount=199.9 cost=105ms status=200
+2026-11-25 11:03:12,341 INFO  [payment-api] [req-2a7e91f0] POST /api/pay/create order_id=ORD20261125044 user_id=1002 amount=88.0 cost=38ms status=200
+2026-11-25 11:03:14,002 INFO  [callback-worker] [req-2a7e91f0] callback received order_id=ORD20261125044 trade_no=TXN20261125044 status=PAID
+2026-11-25 11:03:14,088 INFO  [account-svc] [req-2a7e91f0] insert transaction order_id=ORD20261125044 amount=88.0
+2026-11-25 11:03:14,091 WARN  [account-svc] [req-2a7e91f0] update account rowcount=0 user_id=1002 no exception raised balance_still=0.0
+2026-11-25 14:22:31,550 INFO  [payment-api] [req-6d4b20aa] POST /api/pay/create order_id=ORD20261125132 user_id=1005 amount=0.001 cost=29ms status=200
+2026-11-25 14:22:31,571 WARN  [payment-api] [req-6d4b20aa] amount rounded to 0.0 order_id=ORD20261125132
+2026-11-25 15:41:09,780 INFO  [payment-api] [req-9e1c33bd] POST /api/pay/create order_id=ORD20261125188 user_id=1008 amount=True cost=31ms status=200
+2026-11-25 15:41:09,812 WARN  [payment-api] [req-9e1c33bd] type check bypassed bool is int subclass amount=True
+2026-11-25 16:02:11,201 WARN  [gateway] [req-3f8a102c] slow request POST /api/pay/create cost=1842ms status=200
+2026-11-25 16:05:22,610 WARN  [gateway] [req-5b2e7741] slow request POST /api/order/query cost=1320ms status=200
+2026-11-25 16:08:03,447 WARN  [gateway] [req-7c1d9950] slow request POST /api/pay/callback cost=2105ms status=500
+2026-11-25 16:11:48,932 WARN  [gateway] [req-8d3f001a] slow request POST /api/pay/create cost=967ms status=200
+2026-11-25 16:15:44,667 ERROR [payment-api] [req-a1b2c3d4] unhandled exception POST /api/pay/callback cost=1203ms status=500
+2026-11-25 16:15:44,668 ERROR [payment-api] [req-a1b2c3d4] Traceback (most recent call last):
+2026-11-25 16:15:44,669 ERROR [payment-api] [req-a1b2c3d4]   File "app.py", line 88, in callback
+2026-11-25 16:15:44,670 ERROR [payment-api] [req-a1b2c3d4]     balance = calc_balance(order_id)
+2026-11-25 16:15:44,671 ERROR [payment-api] [req-a1b2c3d4]   File "app.py", line 42, in calc_balance
+2026-11-25 16:15:44,672 ERROR [payment-api] [req-a1b2c3d4]     return total / count
+2026-11-25 16:15:44,673 ERROR [payment-api] [req-a1b2c3d4] ZeroDivisionError: division by zero
+2026-11-25 16:20:01,110 WARN  [gateway] [req-11223344] rate limit hit client_ip=10.0.0.7 path=/api/pay/create
+2026-11-25 16:21:15,884 ERROR [callback-worker] [req-55667788] third-party timeout trade_no=TXN20261125999 retry=1/3
+2026-11-25 16:22:09,003 INFO  [payment-api] [req-99aabbcc] GET /health status=200 cost=2ms
+2026-11-25 16:23:41,220 INFO  [payment-api] [req-ddeeff00] GET /health status=200 cost=3ms

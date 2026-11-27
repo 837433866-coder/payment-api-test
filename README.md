@@ -23,13 +23,31 @@ payment-api-test/
 │   ├── conftest.py         # pytest fixture：base_url、session、测试数据
 │   └── test_pay.py         # 接口自动化用例
 ├── data/
-│   ├── test_cases.md       # 测试用例表（28 条）
-│   └── bug_report.md       # 缺陷记录（3 个真实缺陷）
+│   ├── test_cases.md       # 测试用例表（30 条）
+│   ├── bug_report.md       # 缺陷记录（4 个真实缺陷）
+│   └── resume_snippet.md   # 简历可直接使用的描述与面试话术
 ├── scripts/
-│   └── verify.sql          # 数据一致性验证 SQL
+│   └── verify.sql          # 数据一致性验证 SQL（多表 JOIN）
+├── log-analysis/           # Linux 日志排查实战（14 条命令 + 真实输出证据）
+│   ├── README.md           # 排查手册与面试话术
+│   ├── logs/payment-service.log   # 194 行生产风格日志，埋 4 个缺陷痕迹
+│   ├── drill_cmds.txt      # 14 条排查命令清单
+│   ├── scripts/gen_logs.py        # 日志生成器（固定种子，可复现）
+│   ├── scripts/run_drill.sh       # 批量执行器
+│   └── evidence/session.txt      # 命令 + 真实输出会话
+├── report.html             # pytest-html 测试报告
 ├── requirements.txt
 └── README.md
 ```
+
+## 发现 → 定位 → 归因闭环
+
+本项目不止"测出缺陷"，还把缺陷的日志定位做成了配套实战：
+
+- **接口自动化发现缺陷**：30 条用例，23 通过 + 7 条确认缺陷（XFAIL），独立发现 4 个缺陷
+- **日志排查定位缺陷**：`log-analysis/` 用 194 行日志还原同一批缺陷的现场，14 条命令逐条留证
+
+同一个故障，两种手段：`pytest` 证明缺陷存在，`grep/awk` 证明缺陷怎么发生的。详见 [log-analysis/README.md](log-analysis/README.md)。
 
 ## 被测系统
 

@@ -1,0 +1,14 @@
+grep -n "rowcount=0" logs/payment-service.log
+grep -n "ORD20261125001" logs/payment-service.log
+grep -n -B 2 -A 4 "duplicate callback not blocked" logs/payment-service.log
+grep "2026-11-25 10:12" logs/payment-service.log
+grep -c "ERROR" logs/payment-service.log
+awk '{print $3}' logs/payment-service.log | sort | uniq -c | sort -rn
+awk '$3=="ERROR" {split($2,a,":"); print a[1]":00"}' logs/payment-service.log | sort | uniq -c
+grep "slow request" logs/payment-service.log | awk -F'cost=|ms' '{print $2}' | sort -nr
+grep "WARN" logs/payment-service.log | grep "account-svc"
+grep "status=500" logs/payment-service.log | grep -v "/health"
+grep "duplicate callback not blocked" logs/payment-service.log | grep -oE 'order_id=[A-Z0-9]+' | sort -u
+grep -n -A 8 "unhandled exception" logs/payment-service.log
+grep -oE 'user_id=[0-9]+' logs/payment-service.log | sort | uniq -c | sort -rn | head -10
+tail -n 25 logs/payment-service.log | grep "ERROR"

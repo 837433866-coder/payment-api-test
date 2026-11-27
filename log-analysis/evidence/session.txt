@@ -1,0 +1,120 @@
+────────────────────────────────────────────
+[1] $ grep -n "rowcount=0" logs/payment-service.log
+────────────────────────────────────────────
+175:2026-11-25 11:03:14,091 WARN  [account-svc] [req-2a7e91f0] update account rowcount=0 user_id=1002 no exception raised balance_still=0.0
+
+────────────────────────────────────────────
+[2] $ grep -n "ORD20261125001" logs/payment-service.log
+────────────────────────────────────────────
+156:2026-11-25 10:12:03,123 INFO  [payment-api] [req-7f3a9c12] POST /api/pay/create order_id=ORD20261125001 user_id=1001 amount=100.5 cost=45ms status=200
+157:2026-11-25 10:12:04,456 INFO  [callback-worker] [req-7f3a9c12] callback received order_id=ORD20261125001 trade_no=TXN20261125001 status=PAID
+158:2026-11-25 10:12:04,501 INFO  [account-svc] [req-7f3a9c12] insert transaction order_id=ORD20261125001 amount=100.5 balance_after=100.5
+159:2026-11-25 10:12:07,891 WARN  [callback-worker] [req-b81d4e03] duplicate callback not blocked order_id=ORD20261125001 trade_no=TXN20261125001
+160:2026-11-25 10:12:07,932 INFO  [account-svc] [req-b81d4e03] insert transaction order_id=ORD20261125001 amount=100.5 balance_after=201.0
+161:2026-11-25 10:12:09,214 WARN  [callback-worker] [req-c92f1a77] duplicate callback not blocked order_id=ORD20261125001 trade_no=TXN20261125001
+162:2026-11-25 10:12:09,256 INFO  [account-svc] [req-c92f1a77] insert transaction order_id=ORD20261125001 amount=100.5 balance_after=301.5
+
+────────────────────────────────────────────
+[3] $ grep -n -B 2 -A 4 "duplicate callback not blocked" logs/payment-service.log
+────────────────────────────────────────────
+157-2026-11-25 10:12:04,456 INFO  [callback-worker] [req-7f3a9c12] callback received order_id=ORD20261125001 trade_no=TXN20261125001 status=PAID
+158-2026-11-25 10:12:04,501 INFO  [account-svc] [req-7f3a9c12] insert transaction order_id=ORD20261125001 amount=100.5 balance_after=100.5
+159:2026-11-25 10:12:07,891 WARN  [callback-worker] [req-b81d4e03] duplicate callback not blocked order_id=ORD20261125001 trade_no=TXN20261125001
+160-2026-11-25 10:12:07,932 INFO  [account-svc] [req-b81d4e03] insert transaction order_id=ORD20261125001 amount=100.5 balance_after=201.0
+161:2026-11-25 10:12:09,214 WARN  [callback-worker] [req-c92f1a77] duplicate callback not blocked order_id=ORD20261125001 trade_no=TXN20261125001
+162-2026-11-25 10:12:09,256 INFO  [account-svc] [req-c92f1a77] insert transaction order_id=ORD20261125001 amount=100.5 balance_after=301.5
+163-2026-11-25 10:15:44,401 INFO  [payment-api] [req-813dee95] /api/pay/callback order_id=ORD20261125724 user_id=1001 amount=100.5 cost=143ms status=200
+164-2026-11-25 10:22:46,770 INFO  [payment-api] [req-6d04a57d] /api/pay/create order_id=ORD20261125967 user_id=1004 amount=25.0 cost=137ms status=200
+165-2026-11-25 10:27:22,073 INFO  [payment-api] [req-335e99ae] /api/order/query order_id=ORD20261125444 user_id=1007 amount=199.9 cost=24ms status=200
+
+────────────────────────────────────────────
+[4] $ grep "2026-11-25 10:12" logs/payment-service.log
+────────────────────────────────────────────
+2026-11-25 10:12:03,123 INFO  [payment-api] [req-7f3a9c12] POST /api/pay/create order_id=ORD20261125001 user_id=1001 amount=100.5 cost=45ms status=200
+2026-11-25 10:12:04,456 INFO  [callback-worker] [req-7f3a9c12] callback received order_id=ORD20261125001 trade_no=TXN20261125001 status=PAID
+2026-11-25 10:12:04,501 INFO  [account-svc] [req-7f3a9c12] insert transaction order_id=ORD20261125001 amount=100.5 balance_after=100.5
+2026-11-25 10:12:07,891 WARN  [callback-worker] [req-b81d4e03] duplicate callback not blocked order_id=ORD20261125001 trade_no=TXN20261125001
+2026-11-25 10:12:07,932 INFO  [account-svc] [req-b81d4e03] insert transaction order_id=ORD20261125001 amount=100.5 balance_after=201.0
+2026-11-25 10:12:09,214 WARN  [callback-worker] [req-c92f1a77] duplicate callback not blocked order_id=ORD20261125001 trade_no=TXN20261125001
+2026-11-25 10:12:09,256 INFO  [account-svc] [req-c92f1a77] insert transaction order_id=ORD20261125001 amount=100.5 balance_after=301.5
+
+────────────────────────────────────────────
+[5] $ grep -c "ERROR" logs/payment-service.log
+────────────────────────────────────────────
+8
+
+────────────────────────────────────────────
+[6] $ awk '{print $3}' logs/payment-service.log | sort | uniq -c | sort -rn
+────────────────────────────────────────────
+    176 INFO
+     10 WARN
+      8 ERROR
+
+────────────────────────────────────────────
+[7] $ awk '$3=="ERROR" {split($2,a,":"); print a[1]":00"}' logs/payment-service.log | sort | uniq -c
+────────────────────────────────────────────
+      8 16:00
+
+────────────────────────────────────────────
+[8] $ grep "slow request" logs/payment-service.log | awk -F'cost=|ms' '{print $2}' | sort -nr
+────────────────────────────────────────────
+2105
+1842
+1320
+967
+
+────────────────────────────────────────────
+[9] $ grep "WARN" logs/payment-service.log | grep "account-svc"
+────────────────────────────────────────────
+2026-11-25 11:03:14,091 WARN  [account-svc] [req-2a7e91f0] update account rowcount=0 user_id=1002 no exception raised balance_still=0.0
+
+────────────────────────────────────────────
+[10] $ grep "status=500" logs/payment-service.log | grep -v "/health"
+────────────────────────────────────────────
+2026-11-25 16:08:03,447 WARN  [gateway] [req-7c1d9950] slow request POST /api/pay/callback cost=2105ms status=500
+2026-11-25 16:15:44,667 ERROR [payment-api] [req-a1b2c3d4] unhandled exception POST /api/pay/callback cost=1203ms status=500
+
+────────────────────────────────────────────
+[11] $ grep "duplicate callback not blocked" logs/payment-service.log | grep -oE 'order_id=[A-Z0-9]+' | sort -u
+────────────────────────────────────────────
+order_id=ORD20261125001
+
+────────────────────────────────────────────
+[12] $ grep -n -A 8 "unhandled exception" logs/payment-service.log
+────────────────────────────────────────────
+184:2026-11-25 16:15:44,667 ERROR [payment-api] [req-a1b2c3d4] unhandled exception POST /api/pay/callback cost=1203ms status=500
+185-2026-11-25 16:15:44,668 ERROR [payment-api] [req-a1b2c3d4] Traceback (most recent call last):
+186-2026-11-25 16:15:44,669 ERROR [payment-api] [req-a1b2c3d4]   File "app.py", line 88, in callback
+187-2026-11-25 16:15:44,670 ERROR [payment-api] [req-a1b2c3d4]     balance = calc_balance(order_id)
+188-2026-11-25 16:15:44,671 ERROR [payment-api] [req-a1b2c3d4]   File "app.py", line 42, in calc_balance
+189-2026-11-25 16:15:44,672 ERROR [payment-api] [req-a1b2c3d4]     return total / count
+190-2026-11-25 16:15:44,673 ERROR [payment-api] [req-a1b2c3d4] ZeroDivisionError: division by zero
+191-2026-11-25 16:20:01,110 WARN  [gateway] [req-11223344] rate limit hit client_ip=10.0.0.7 path=/api/pay/create
+192-2026-11-25 16:21:15,884 ERROR [callback-worker] [req-55667788] third-party timeout trade_no=TXN20261125999 retry=1/3
+
+────────────────────────────────────────────
+[13] $ grep -oE 'user_id=[0-9]+' logs/payment-service.log | sort | uniq -c | sort -rn | head -10
+────────────────────────────────────────────
+     20 user_id=1004
+     20 user_id=1002
+     19 user_id=1008
+     18 user_id=1010
+     18 user_id=1009
+     18 user_id=1003
+     18 user_id=1001
+     17 user_id=1007
+     12 user_id=1006
+      9 user_id=1005
+
+────────────────────────────────────────────
+[14] $ tail -n 25 logs/payment-service.log | grep "ERROR"
+────────────────────────────────────────────
+2026-11-25 16:15:44,667 ERROR [payment-api] [req-a1b2c3d4] unhandled exception POST /api/pay/callback cost=1203ms status=500
+2026-11-25 16:15:44,668 ERROR [payment-api] [req-a1b2c3d4] Traceback (most recent call last):
+2026-11-25 16:15:44,669 ERROR [payment-api] [req-a1b2c3d4]   File "app.py", line 88, in callback
+2026-11-25 16:15:44,670 ERROR [payment-api] [req-a1b2c3d4]     balance = calc_balance(order_id)
+2026-11-25 16:15:44,671 ERROR [payment-api] [req-a1b2c3d4]   File "app.py", line 42, in calc_balance
+2026-11-25 16:15:44,672 ERROR [payment-api] [req-a1b2c3d4]     return total / count
+2026-11-25 16:15:44,673 ERROR [payment-api] [req-a1b2c3d4] ZeroDivisionError: division by zero
+2026-11-25 16:21:15,884 ERROR [callback-worker] [req-55667788] third-party timeout trade_no=TXN20261125999 retry=1/3
+
