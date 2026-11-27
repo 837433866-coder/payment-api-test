@@ -1,5 +1,7 @@
 # 支付接口测试项目
 
+[![支付接口自动化 CI](https://github.com/837433866-coder/payment-api-test/actions/workflows/ci.yml/badge.svg)](https://github.com/837433866-coder/payment-api-test/actions/workflows/ci.yml)
+
 在线仓库：https://github.com/837433866-coder/payment-api-test
 
 对一套 mock 支付服务做接口测试，覆盖**功能、边界、幂等、数据一致性**四类场景。
@@ -28,6 +30,8 @@ payment-api-test/
 │   └── resume_snippet.md   # 简历可直接使用的描述与面试话术
 ├── scripts/
 │   └── verify.sql          # 数据一致性验证 SQL（多表 JOIN）
+├── .github/workflows/ci.yml      # GitHub Actions：起服务→跑测试→门禁→Allure→上传报告
+├── scripts/check_gate.py         # 质量门禁：用例数/失败数/xfail/xpass 四道检查
 ├── log-analysis/           # Linux 日志排查实战（14 条命令 + 真实输出证据）
 │   ├── README.md           # 排查手册与面试话术
 │   ├── logs/payment-service.log   # 194 行生产风格日志，埋 4 个缺陷痕迹
@@ -48,6 +52,46 @@ payment-api-test/
 - **日志排查定位缺陷**：`log-analysis/` 用 194 行日志还原同一批缺陷的现场，14 条命令逐条留证
 
 同一个故障，两种手段：`pytest` 证明缺陷存在，`grep/awk` 证明缺陷怎么发生的。详见 [log-analysis/README.md](log-analysis/README.md)。
+
+## CI/CD 与质量门禁
+
+`.github/workflows/ci.yml` 在每次 push 到 `main` 时自动执行：
+
+```
+检出代码 → 装依赖 → 后台起 mock 服务 → 健康检查等待 → 跑 30 条 pytest
+→ 质量门禁 → 生成 Allure 报告 → 上传 artifact → 关服务
+```
+
+**质量门禁**（`scripts/check_gate.py`）不是摆设，四道检查：
+
+| 检查 | 规则 | 防什么 |
+|---|---|---|
+| 用例总数 | ≥ 30 | 删用例刷通过率 |
+| failures / errors | = 0 | 真失败混进来 |
+| xfail 数量 | ≤ 7 | 新增缺陷必须显式登记 |
+| xpass 数量 | = 0 | 缺陷修了要更新用例标记 |
+
+本地验证门禁确实能拦：
+
+```bash
+python scripts/check_gate.py                    # GATE: PASSED
+MIN_TESTS=31 python scripts/check_gate.py       # GATE: BLOCKED（用例数不足）
+MAX_XFAIL=6 python scripts/check_gate.py        # GATE: BLOCKED（新增缺陷未登记）
+```
+
+本地复现 CI 全流程：
+
+```bash
+pip install -r requirements.txt
+cd mock_server && python app.py & cd ..
+python -m pytest tests/ -v --junitxml=junit.xml \
+  --html=report.html --self-contained-html --alluredir=allure-results
+python scripts/check_gate.py
+```
+
+**面试话术**：
+
+> 我把接口用例接进了 GitHub Actions，push 后自动起服务、跑测试、出报告。关键是加了质量门禁：用例数低于基线、有意外失败、xfail 超出已登记数量、或者出现 xpass，都会卡住构建。因为项目里有 7 个已确认缺陷标记为 xfail，如果有人偷偷删用例或新增缺陷不登记，门禁会直接拦下来。报告用 Allure 和 pytest-html 双份上传，失败时也能拿到 artifact 排查。
 
 ## 被测系统
 
