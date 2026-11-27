@@ -56,12 +56,18 @@ jobs:
       - name: 质量门禁
         run: python scripts/check_gate.py
 
+      - name: 设置 Java 17（Allure 依赖）
+        if: always()
+        uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: '17'
+
       - name: 生成 Allure 报告
         if: always()
-        uses: simple-elf/allure-report-action@master
-        with:
-          allure_results: allure-results
-          allure_report: allure-report
+        run: |
+          npm install -g allure-commandline --unsafe-perm
+          allure generate allure-results --clean -o allure-report
 
       - name: 上传测试报告
         if: always()
