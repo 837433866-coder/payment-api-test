@@ -8,3 +8,5 @@ mock_server/pay.db
 junit.xml
 allure-results/
 allure-report/
+perf-test/results/report_*/
+perf-test/results/smoke.jtl
